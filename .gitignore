@@ -3,3 +3,4 @@ CMakeCache.txt
 cmake_install.cmake
 Makefile
 token_document_freq
+collate

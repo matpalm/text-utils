@@ -9,3 +9,6 @@ ADD_DEFINITIONS(-Wall -O2 -DNDEBUG -march=native -mtune=native `getconf LFS_CFLA
 ADD_EXECUTABLE(token_document_freq
                src/token_document_freq
                )
+ADD_EXECUTABLE(collate
+               src/collate
+               )

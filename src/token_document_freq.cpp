@@ -1,16 +1,22 @@
 #include <iostream>
-#include <fstream>
 #include <sstream>
 #include <string>
 #include <set>
 #include <map>
-#include <cstdlib>
 #include <iterator>
 
 using namespace std;
 
 typedef set<string> ss;
 typedef map<string,int> msi;
+
+/*
+    slurp stdin and
+    emit
+     token TAB n
+     ...
+    to denote token occured on n distinct lines
+*/
 
 int main(int argc, char **argv)
 {
