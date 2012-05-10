@@ -12,3 +12,6 @@ ADD_EXECUTABLE(token_document_freq
 ADD_EXECUTABLE(collate
                src/collate
                )
+ADD_EXECUTABLE(chop_most_least_freq
+               src/chop_most_least_freq
+               )
