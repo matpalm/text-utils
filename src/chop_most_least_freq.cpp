@@ -47,6 +47,7 @@ int main(int argc, char **argv)
     string line;
     m_s_ui token_document_freq;
     unsigned int num_docs = 0;
+    cerr << "first pass to count tokens" << endl;
     while (getline(file, line)) {
         // tokenise document
         istringstream iss(line, istringstream::in);
@@ -78,6 +79,7 @@ int main(int argc, char **argv)
     unsigned int num_tokens_to_discard = 0;
     unsigned int num_entities_kept = 0;
     const string entity_marker = "entity/";
+    cerr << "first pass to count tokens" << endl;
     for(m_s_ui::iterator it=token_document_freq.begin(); it!=token_document_freq.end(); ++it) {
         if (KEEP_ALL_ENTITIES && equal(entity_marker.begin(), entity_marker.end(), it->first.begin())) {
             tokens_to_keep.insert(it->first);

@@ -15,3 +15,8 @@ ADD_EXECUTABLE(collate
 ADD_EXECUTABLE(chop_most_least_freq
                src/chop_most_least_freq
                )
+ADD_EXECUTABLE(lda_prep
+               src/lda_prep
+               )
+
+TARGET_LINK_LIBRARIES(lda_prep boost_system)
