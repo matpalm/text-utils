@@ -16,9 +16,15 @@ typedef map<string, unsigned int> m_s_ui;
 // should we keep all entities? regardless of freq?
 const bool KEEP_ALL_ENTITIES = true;
 
+bool looks_like_entity_ref(string token) {
+    const string entity_marker = "entity/";
+    return equal(entity_marker.begin(), entity_marker.end(), token.begin());
+}
+
 int main(int argc, char **argv)
 {
     // arg handling
+    // todo: boost_program_options
     if (argc!=4) {
         cerr << "usage: " << argv[0] << " <file> <lowerbound> <upperbound>" << endl;
         return 2;
@@ -74,14 +80,13 @@ int main(int argc, char **argv)
     // decide what tokens to keep
     s_s tokens_to_keep;
 
-    // keep other values in range and all entities
+    // keep values in range and all entities
     unsigned int num_tokens_to_keep = 0;
     unsigned int num_tokens_to_discard = 0;
     unsigned int num_entities_kept = 0;
-    const string entity_marker = "entity/";
     cerr << "first pass to count tokens" << endl;
     for(m_s_ui::iterator it=token_document_freq.begin(); it!=token_document_freq.end(); ++it) {
-        if (KEEP_ALL_ENTITIES && equal(entity_marker.begin(), entity_marker.end(), it->first.begin())) {
+        if (KEEP_ALL_ENTITIES && looks_like_entity_ref(it->first)) {
             tokens_to_keep.insert(it->first);
             ++num_entities_kept;
         }

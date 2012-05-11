@@ -44,4 +44,5 @@ int main(int argc, char **argv) {
             cout << " " << *it;
         cout << "\n";
     }
+    return 0;
 }

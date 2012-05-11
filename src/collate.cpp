@@ -32,4 +32,5 @@ int main(int argc, char **argv)
         freqs[token] += count;
     for(msi::iterator it=freqs.begin(); it!=freqs.end(); ++it)
         cout << it->first << "\t" << it->second << "\n";
+    return 0;
 }
