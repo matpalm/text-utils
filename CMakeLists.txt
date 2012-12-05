@@ -9,14 +9,9 @@ ADD_DEFINITIONS(-Wall -O2 -DNDEBUG -march=native -mtune=native `getconf LFS_CFLA
 ADD_EXECUTABLE(token_document_freq
                src/token_document_freq
                )
-ADD_EXECUTABLE(collate
-               src/collate
+ADD_EXECUTABLE(sum_values
+               src/sum_values
                )
-ADD_EXECUTABLE(chop_most_least_freq
-               src/chop_most_least_freq
+ADD_EXECUTABLE(max_values
+               src/max_values
                )
-ADD_EXECUTABLE(lda_prep
-               src/lda_prep
-               )
-
-TARGET_LINK_LIBRARIES(lda_prep boost_system)

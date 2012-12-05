@@ -2,21 +2,20 @@
 #include <map>
 
 /*
-    given
-     token TAB count
+    given some token TAB count input sum count values 
 
-    eg
+    eg input
      a 2
      b 4
      a 4
 
-    emit
+    eg output
      a 6
      b 4
 
     does not require input sorted but will hold entire corpus in mem.
 
-    this code has not safeguards and will segfault at it's earliest convenience
+    this code has no safeguards and will segfault at it's earliest convenience
 */
 
 using namespace std;
